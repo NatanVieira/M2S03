@@ -5,7 +5,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Arquivos Diversos",
       "ColorIndex": -1
+    },
+    "de0a7bd3-18c9-4f67-804b-440e01af0e68": {
+      "ProjectGuid": "de0a7bd3-18c9-4f67-804b-440e01af0e68",
+      "DisplayName": "GeraEstoque",
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 1
 }
