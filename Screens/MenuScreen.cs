@@ -1,10 +1,11 @@
 using System;
 using System.Globalization;
+using GeraEstoque.Repositories;
 namespace GeraEstoque.Screens;
 
 public static class MenuScreen {
 
-    public static void Iniciar() {
+    public static void Iniciar(ProdutoRepository repositorio) {
                 Console.Clear();
                 System.Console.WriteLine("Seja Bem Vindo ao GeraEstoque 1.0");
                 System.Console.WriteLine("------------------------------------------");
@@ -21,23 +22,23 @@ public static class MenuScreen {
                 switch (escolhaUsuario)
                 {
                     case "1":
-                        CriarProdutoScreen.Iniciar();
-                        Iniciar();
+                        CriarProdutoScreen.Iniciar(repositorio);
+                        Iniciar(repositorio);
                         break;
                     case "2":
-                        Iniciar();
+                        Iniciar(repositorio);
                         break;
                     case "3":
-                        Iniciar();
+                        Iniciar(repositorio);
                         break;
                     case "4":
-                        Iniciar();
+                        Iniciar(repositorio);
                         break;
                     case "0":
                         break;
                     default:
                         Console.WriteLine("Opção não encontrada");
-                        Iniciar();
+                        Iniciar(repositorio);
                         break;
                 }
     }

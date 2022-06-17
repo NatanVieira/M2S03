@@ -3,15 +3,15 @@ namespace GeraEstoque.Models;
 public class Produto {
 
         public string? nome { get; set; }
-        public double qtdEstqoque { get; set; }
+        public double qtdEstoque { get; set; }
         public decimal? valorCompra { get; set; }
         public decimal? valorVenda { get; set; }
         public Guid id { get; set; }
 
-        Produto(){
+        public Produto(){
 
         }
-        Produto(string nome, double qtdEstoque, decimal valorCompra, decimal valorVenda){
+        public Produto(string nome, double qtdEstoque, decimal valorCompra, decimal valorVenda){
             this.nome = nome;
             this.qtdEstqoque = qtdEstoque;
             this.valorCompra = valorCompra;

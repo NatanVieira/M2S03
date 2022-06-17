@@ -1,23 +1,27 @@
+using GeraEstoque.Repositories;
+using GeraEstoque.Models;
 namespace GeraEstoque.Screens;
 
 public static class CriarProdutoScreen {
     
-    public static void Iniciar() {        
+    public static void Iniciar(ProdutoRepository repositorio) {        
         Console.WriteLine("Preencha as informações abaixo");
+        Produto produto = new Produto();
         Console.WriteLine("Nome:");
-        nome = Console.ReadLine();
+        produto.nome = Console.ReadLine();
         Console.WriteLine("Quantidade em estoque:");
-        qtdEstoque = Convert.ToDouble(Console.ReadLine());
+        produto.qtdEstoque= Convert.ToDouble(Console.ReadLine());
         Console.WriteLine("Valor de compra:");
-        valorCompra = Convert.ToDecimal(Console.ReadLine());
+        produto.valorCompra = Convert.ToDecimal(Console.ReadLine());
         Console.WriteLine("Valor de venda:");
-        valorVenda = Convert.ToDecimal(Console.ReadLine());
-        Console.WriteLine("ID: {0}", id);
-        Console.WriteLine("Nome: {0}", nome);
-        Console.WriteLine("Qtd: {0}", qtdEstoque);
-        Console.WriteLine($"R$ Compra: {valorCompra.ToString()}");
-        Console.WriteLine($"R$ Venda: {valorVenda}");
-        Console.WriteLine("Pressione Qualquer tecla para voltar ao menu");
+        produto.valorVenda = Convert.ToDecimal(Console.ReadLine());
+        repositorio.produtos.Add(produto);
+        // Console.WriteLine("ID: {0}", id);
+        // Console.WriteLine("Nome: {0}", nome);
+        // Console.WriteLine("Qtd: {0}", qtdEstoque);
+        // Console.WriteLine($"R$ Compra: {valorCompra.ToString()}");
+        // Console.WriteLine($"R$ Venda: {valorVenda}");
+        // Console.WriteLine("Pressione Qualquer tecla para voltar ao menu");
         // string? voltaMenu = Console.ReadLine();
         // if (voltaMenu != null && voltaMenu != "")
         //     MenuScreen.Iniciar();

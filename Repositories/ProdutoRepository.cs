@@ -4,7 +4,7 @@ namespace GeraEstoque.Repositories;
 public class ProdutoRepository {
     public IList<Produto> produtos;
 
-    ProdutoRepository() {
+    public ProdutoRepository() {
         produtos = new List<Produto>();
     }
 }
