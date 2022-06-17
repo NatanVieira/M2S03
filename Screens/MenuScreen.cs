@@ -14,6 +14,7 @@ public static class MenuScreen {
                 System.Console.WriteLine("2 - Consultar Produto");
                 System.Console.WriteLine("3 - Modificar Produto");
                 System.Console.WriteLine("4 - Excluir Produto");
+                System.Console.WriteLine("5 - Listar todos os produtos");
                 System.Console.WriteLine("0 - Sair");
 
                 System.Console.WriteLine("Digite a opção:");
@@ -33,6 +34,9 @@ public static class MenuScreen {
                         break;
                     case "4":
                         Iniciar(repositorio);
+                        break;
+                    case "5":
+                        ListarProdutoScreen.Iniciar(repositorio);
                         break;
                     case "0":
                         break;
