@@ -13,7 +13,7 @@ public class Produto {
         }
         public Produto(string nome, double qtdEstoque, decimal valorCompra, decimal valorVenda){
             this.nome = nome;
-            this.qtdEstqoque = qtdEstoque;
+            this.qtdEstoque = qtdEstoque;
             this.valorCompra = valorCompra;
             this.valorVenda = valorVenda;
             this.id = Guid.NewGuid();
@@ -21,6 +21,6 @@ public class Produto {
 
     public override string ToString()
     {
-        return $"Produto: ID: {this.id} | Nome: {this.nome} | Qtd: {this.qtdEstqoque} | R$ Compra: {this.valorCompra} | R$ Venda: {this.valorVenda}";
+        return $"Produto: ID: {this.id} | Nome: {this.nome} | Qtd: {this.qtdEstoque} | R$ Compra: {this.valorCompra} | R$ Venda: {this.valorVenda}";
     }
 }
