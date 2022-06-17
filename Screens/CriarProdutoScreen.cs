@@ -2,12 +2,7 @@ namespace GeraEstoque.Screens;
 
 public static class CriarProdutoScreen {
     
-    public static void Iniciar() {
-        string? nome = "";
-        double? qtdEstoque = 0;
-        decimal? valorCompra = 0M;
-        decimal? valorVenda = 0M;
-        
+    public static void Iniciar() {        
         Console.WriteLine("Preencha as informações abaixo");
         Console.WriteLine("Nome:");
         nome = Console.ReadLine();
@@ -17,7 +12,6 @@ public static class CriarProdutoScreen {
         valorCompra = Convert.ToDecimal(Console.ReadLine());
         Console.WriteLine("Valor de venda:");
         valorVenda = Convert.ToDecimal(Console.ReadLine());
-        string id = Guid.NewGuid().ToString();
         Console.WriteLine("ID: {0}", id);
         Console.WriteLine("Nome: {0}", nome);
         Console.WriteLine("Qtd: {0}", qtdEstoque);
